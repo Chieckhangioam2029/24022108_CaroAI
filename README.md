@@ -6,14 +6,6 @@ Giao diện đồ hoạ Pygame, hỗ trợ 3 chế độ: Người vs Người, 
 
 ---
 
-## Thông tin sinh viên
-
-| Trường | Trường đại học Công Nghệ - ĐHQGHN |
-| Họ tên | Lê Minh Dương |
-| MSSV | 24022108 |
-| Môn học | INT3401_1 |
-
----
 
 ## Yêu cầu môi trường
 
@@ -85,7 +77,7 @@ Chế độ này chỉ hỗ trợ **Người (X) vs AI (O)**, bàn cờ hiển t
 python -m source_code.benchmark.benchmark
 ```
 
-So sánh hiệu năng Minimax vs Alpha-Beta trên 5 trạng thái bàn cờ mẫu ở độ sâu 1–3.
+So sánh hiệu năng Minimax vs Alpha-Beta trên 6 trạng thái bàn cờ mẫu ở độ sâu 1–3.
 Kết quả in ra terminal và xuất file CSV tại `source_code/logs/results.csv`.
 
 ### Chạy file .exe (không cần Python)
