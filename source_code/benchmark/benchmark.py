@@ -28,7 +28,13 @@ CSV_FILE = os.path.join(os.path.dirname(__file__), "..", "logs", "results.csv")
 def run_single(algorithm_name, get_best_move_fn, board, depth):
     test_board = copy.deepcopy(board)
 
-    result = get_best_move_fn(test_board, depth, AI_PLAYER, HUMAN_PLAYER)
+    result = get_best_move_fn(
+    test_board,
+    depth,
+    AI_PLAYER,
+    HUMAN_PLAYER,
+    benchmark_mode=True,
+)
 
     return {
         "algorithm":       algorithm_name,

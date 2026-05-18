@@ -103,8 +103,104 @@ def state_complex():
     board.make_move(9, 5, PLAYER_O)
 
     return board
+# State 6: Search-heavy position
+# Không có thắng ngay / block ngay
+# Buộc Minimax và AlphaBeta phải search sâu
 
+def state_search_heavy():
+    board = Board(size=15)
 
+    moves = [
+        (7, 7, PLAYER_X),
+        (7, 8, PLAYER_O),
+
+        (8, 7, PLAYER_X),
+        (6, 8, PLAYER_O),
+
+        (6, 7, PLAYER_X),
+        (8, 8, PLAYER_O),
+
+        (7, 6, PLAYER_X),
+        (7, 9, PLAYER_O),
+
+        (9, 7, PLAYER_X),
+        (5, 8, PLAYER_O),
+
+        (8, 6, PLAYER_X),
+        (6, 9, PLAYER_O),
+
+        (6, 6, PLAYER_X),
+        (8, 9, PLAYER_O),
+
+        (9, 8, PLAYER_X),
+        (5, 7, PLAYER_O),
+    ]
+    # State 7: Search-heavy — thật sự cần search
+def state_search_heavy():
+    board = Board(size=15)
+
+    moves = [
+        (7, 7, PLAYER_X),
+        (7, 8, PLAYER_O),
+
+        (8, 8, PLAYER_X),
+        (6, 7, PLAYER_O),
+
+        (6, 6, PLAYER_X),
+        (8, 7, PLAYER_O),
+
+        (9, 8, PLAYER_X),
+        (5, 7, PLAYER_O),
+
+        (7, 5, PLAYER_X),
+        (7, 9, PLAYER_O),
+
+        (8, 5, PLAYER_X),
+        (6, 9, PLAYER_O),
+
+        (5, 6, PLAYER_X),
+        (9, 7, PLAYER_O),
+
+        (10, 8, PLAYER_X),
+        (4, 7, PLAYER_O),
+    ]
+
+    for r, c, p in moves:
+        board.make_move(r, c, p)
+
+    return board
+
+# State 6: Search-heavy — no immediate tactical win/block
+def state_search_heavy():
+    board = Board(size=15)
+
+    moves = [
+        (7, 7, PLAYER_X),
+        (7, 9, PLAYER_O),
+
+        (8, 8, PLAYER_X),
+        (6, 8, PLAYER_O),
+
+        (9, 7, PLAYER_X),
+        (5, 7, PLAYER_O),
+
+        (6, 6, PLAYER_X),
+        (8, 10, PLAYER_O),
+
+        (10, 8, PLAYER_X),
+        (4, 8, PLAYER_O),
+
+        (7, 5, PLAYER_X),
+        (7, 11, PLAYER_O),
+
+        (5, 9, PLAYER_X),
+        (9, 9, PLAYER_O),
+    ]
+
+    for r, c, p in moves:
+        board.make_move(r, c, p)
+
+    return board
 # Registry — Danh sách tất cả states
 
 TEST_STATES = [
@@ -113,4 +209,5 @@ TEST_STATES = [
     ("AI_CAN_WIN",    state_ai_can_win),
     ("NEED_BLOCK",    state_need_block),
     ("COMPLEX",       state_complex),
+    ("SEARCH_HEAVY",  state_search_heavy),
 ]
