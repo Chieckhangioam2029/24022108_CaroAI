@@ -133,7 +133,7 @@ MSSV_HoTen_CaroAI_DeSo/
 
 ## Cấu hình mặc định
 
-Các hằng số trong `source_code/config.py`:
+Các hằng số trong code:
 
 | Tham số | Giá trị | Ý nghĩa |
 |---|---|---|
