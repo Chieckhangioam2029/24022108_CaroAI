@@ -100,7 +100,6 @@ MSSV_HoTen_CaroAI_DeSo/
 ├── test_perf.py             # Script test hiệu năng nhanh
 │
 ├── source_code/
-│   ├── config.py            # Hằng số cấu hình (BOARD_SIZE, WIN_LENGTH, MAX_DEPTH)
 │   ├── main.py              # Entry point console (Người vs AI qua terminal)
 │   │
 │   ├── ai/                  # Thuật toán AI
